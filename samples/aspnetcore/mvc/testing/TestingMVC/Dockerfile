@@ -1,2 +1,2 @@
-FROM microsoft/aspnet
-COPY .dotnet/publish/sample/publish /inetpub/wwwroot
+FROM microsoft/iis:nanoserver
+COPY sample C:/inetpub/wwwroot
