@@ -1,2 +1,2 @@
 FROM microsoft/iis:nanoserver
-COPY sample C:/inetpub/wwwroot
+COPY ./dotnet/publish C:/inetpub/wwwroot
