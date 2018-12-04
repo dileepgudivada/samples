@@ -1,3 +1,3 @@
 FROM microsoft/iis:nanoserver
-COPY sample C:/inetpub/wwwroot
+COPY C:/dotnet/publish C:/inetpub/wwwroot
 EXPOSE 5050
