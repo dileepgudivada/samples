@@ -1,1 +1,28 @@
-
+node('windowsslave'){
+ stage ('checkout'){
+    git 'https://github.com/dileepgudivada/samples'
+}
+stage ('restore'){
+    bat 'C:/tools/nuget.exe restore C:/dotnet/workspace/docker/samples/aspnetcore/mvc/testing/TestingMVC/TestingMVC.sln'
+   bat "\"${tool 'msbuild.exe'}\" C:/dotnet/workspace/docker/samples/aspnetcore/mvc/testing/TestingMVC/TestingMVC.sln /p:Configuration=Release /property:OutDir=bin/publish /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+}
+stage('publish'){
+    //bat 'dotnet publish C:/dotnet/workspace/docker/samples/aspnetcore/mvc/testing/TestingMVC/src/TestingMVC/TestingMVC.csproj --configuration Release --output C:/dotnet/publish'
+}
+stage('builddockerimage'){
+//bat 'docker build -t dileep2018/dotnet:0.1 .'
+}
+stage('Push to Docker Hub'){
+ 
+	 //withCredentials([string(credentialsId: 'dockerid', variable: 'dockerHub')]) {
+       // bat "docker login -u dileep2018 -p ${dockerHub}"
+   // }
+	 //bat 'docker push dileep2018/dotnet:0.1'
+ }
+stage('dockerpull'){
+    bat 'docker pull dileep2018/dotnet:0.1'
+}
+stage('dockerrun'){
+ bat 'docker run -d -p 4040:80 dileep2018/dotnet:0.1'
+}
+}
