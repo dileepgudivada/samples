@@ -25,4 +25,6 @@ stage('dockerpull'){
 stage('dockerrun'){
  bat 'docker run -d -p 4040:80 dileep2018/dotnet:0.1'
 }
+stage('JMeter'){
+ bat 'C:\\apache-jmeter-5.0\\bin\\jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t C:\\apache-jmeter-5.0\\bin\\test.jmx -l C:\\apache-jmeter-5.0\\bin\\test.jtl'
 }
