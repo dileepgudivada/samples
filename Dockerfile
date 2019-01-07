@@ -1,2 +1,2 @@
 FROM microsoft/iis:nanoserver
-COPY . /SumitWorkspace/sample/*.publish C:/inetpub/wwwroot
+COPY . /SumitWorkspace/*.publish C:/inetpub/wwwroot
