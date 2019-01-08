@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>inprocess</AspNetCoreHostingModel>
   </PropertyGroup>
+   
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
@@ -17,5 +21,6 @@
   <ItemGroup>
     <ProjectReference Include="..\ProducesMatcherPolicy\ProducesMatcherPolicy.csproj" />
   </ItemGroup>
-
+  
+   
 </Project>
