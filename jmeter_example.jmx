@@ -39,8 +39,8 @@
       </CacheManager>
       <hashTree/>
       <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="think_time" enabled="true">
-        <stringProp name="ConstantTimer.delay">1000</stringProp>
-        <stringProp name="RandomTimer.range">5000</stringProp>
+        <stringProp name="ConstantTimer.delay">100</stringProp>
+        <stringProp name="RandomTimer.range">500</stringProp>
       </GaussianRandomTimer>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
@@ -49,8 +49,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(threads,60)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(rampup,50)}</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(threads,30)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(rampup,20)}</stringProp>
         <longProp name="ThreadGroup.start_time">1345498621000</longProp>
         <longProp name="ThreadGroup.end_time">1345498621000</longProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
