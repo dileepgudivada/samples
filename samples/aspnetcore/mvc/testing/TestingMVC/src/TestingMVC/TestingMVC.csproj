@@ -8,8 +8,8 @@
    <PropertyGroup>
      <PackageId>samples</PackageId>
      <Version>1.0.0</Version>
-     <Authors>your_name</Authors>
-     <Company>your_company</Company>
+     <Authors>your</Authors>
+     <Company>company</Company>
    <PropertyGroup>
 
   <ItemGroup>
